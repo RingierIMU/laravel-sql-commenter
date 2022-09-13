@@ -3,6 +3,7 @@
 namespace Spatie\SqlCommenter;
 
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 use Stringable;
 
 class Comment implements Stringable
@@ -27,7 +28,7 @@ class Comment implements Stringable
             ->map(fn (Comment $comment) => (string)$comment)
             ->join(",");
 
-        return str($commentsAsString)
+        return Str::of($commentsAsString)
             ->prepend('/*')
             ->append("*/");
     }
