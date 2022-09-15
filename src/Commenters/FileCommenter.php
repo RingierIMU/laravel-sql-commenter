@@ -30,6 +30,7 @@ class FileCommenter implements Commenter
                 $ignoredPathSegments = [
                     'laravel-sql-commenter/src',
                     'laravel/framework',
+                    'watson/rememberable',
                 ];
 
                 foreach ($ignoredPathSegments as $ignoredPathSegment) {
