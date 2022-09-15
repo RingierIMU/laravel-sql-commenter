@@ -32,6 +32,7 @@ class FileCommenter implements Commenter
                 $ignoredPathSegments = array_merge([
                     'laravel-sql-commenter/src',
                     'laravel/framework',
+                    'watson/rememberable',
                 ], $this->excludePathSegments);
 
                 foreach ($ignoredPathSegments as $ignoredPathSegment) {
